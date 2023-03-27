@@ -24,9 +24,15 @@ void loop() {
   String leftCommandValue = command.substring(2, 5);
   String rightMotorCommand = command.substring(5, 7);
   String rightCommandValue = command.substring(7, 10);
+  String beltMotorCommand = command.substring(10, 12);
+  String beltMotorValue = command.substring(12, 15);
+  String actMotorCommand = command.substring(15, 17);
+  String actMotorValue = command.substring(17, 20);
 
   int leftMotor = leftCommandValue.toInt();
   int rightMotor = rightCommandValue.toInt();
+  int beltMotor = beltMotorValue.toInt();
+  int actMotor = actMotorValue.toInt();
   // Writes to left motors
   if (leftMotorCommand == "wf") {
     digitalWrite(dir1, HIGH);
